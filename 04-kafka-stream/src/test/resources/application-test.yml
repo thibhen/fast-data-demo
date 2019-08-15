@@ -1,0 +1,4 @@
+
+
+# Do not load KAFKA if in testing mode.
+kafkaStreams.enabled: false

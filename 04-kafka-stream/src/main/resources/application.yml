@@ -1,0 +1,9 @@
+
+application.id: "KafkaStreamProcessor"
+bootstrap.servers: "kafka:9092"
+default.key.serde: org.apache.kafka.common.serialization.Serdes$StringSerde
+#default.value.serde: org.apache.kafka.common.serialization.Serdes$StringSerde
+default.value.serde: org.springframework.kafka.support.serializer.JsonSerializer
+#default.value.serde: fastdatademo.stream.MySerde
+kafka.input.topic: raw-http
+kafka.output.topic: kafka-stream1

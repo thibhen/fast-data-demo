@@ -1,0 +1,35 @@
+{
+    "request" : {
+      "headers" : {
+        "host" : "localhost:8083",
+        "connection" : "keep-alive",
+        "content-length" : "211",
+        "cache-control" : "max-age=0",
+        "origin" : "http://localhost:8083",
+        "upgrade-insecure-requests" : "1",
+        "content-type" : "application/x-www-form-urlencoded",
+        "user-agent" : "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/63.0.3239.108 Safari/537.36",
+        "accept" : "text/html,application/xhtml+8",
+        "referer" : "http://localhost:8083/jpetstore/actions/Cart.action;jsessionid=5BC6A563E022FD1B1FB52EFAAD371111",
+        "accept-encoding" : "gzip, deflate, br",
+        "accept-language" : "fr-FR,fr;q=0.9,en-US;q=0.8,en;q=0.7",
+        "cookie" : "JSESSIONID=D19E0586AC34D72F28DBFDA89DF8CD4A; _ga=GA1.1.371390149.1561733370"
+      },
+      "parameters" : {
+        "_sourcePage" : "zm-GkbQqh50Nd3vt_D-El4NBAVCKiHCAFvVlMNqb1uHFoWS4xX8E_S6AmBlWFV0hiR_MCNVI17n8Q8WB-6UyUGb5lCfcxV85",
+        "__fp" : "jalYvOJznJixYt47ASjzbDy_pi0dgl0bVDiNp62S5gbidGq4frDCssQoyU3u7Sg9",
+        "updateCartQuantities" : "Update Cart"
+      },
+      "body" : "updateCartQuantities=Update+Cart&_sourcePage=zm-GkbQqh50Nd3vt_D-El4NBAVCKiHCAFvVlMNqb1uHFoWS4xX8E_S6AmBlWFV0hiR_MCNVI17n8Q8WB-6UyUGb5lCfcxV85&__fp=jalYvOJznJixYt47ASjzbDy_pi0dgl0bVDiNp62S5gbidGq4frDCssQoyU3u7Sg9",
+      "method" : "POST",
+      "contentType" : "application/x-www-form-urlencoded;charset=UTF-8",
+      "remoteAddr" : "172.17.0.1",
+      "servletPath" : "/jpetstore/actions/Cart.action",
+      "sessionId" : "D19E0586AC34D72F28DBFDA89DF8CD4A"
+    },
+    "response" : {
+      "body" : "\n\n\n\n\n\n\n<!DOCTYPE html PUBLIC \"-//W3C//DTD XHTML 1.0 Transitional//EN\"\n\"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd\">\n\n<html xmlns=\"http://www.w3.org/1999/xhtml\">\n\n<head>\n<link rel=\"StyleSheet\" href=\"../css/jpetstore.css\" type=\"text/css\"\n\tmedia=\"screen\" />\n\n<meta name=\"generator\"\n\tcontent=\"HTML Tidy for Linux/x86 (vers 1st November 2002), see www.w3.org\" />\n<title>JPetStore Demo</title>\n<meta content=\"text/html; charset=windows-1252\"\n\thttp-equiv=\"Content-Type\" />\n<meta http-equiv=\"Cache-Control\" content=\"max-age=0\" />\n<meta http-equiv=\"Cache-Control\" content=\"no-cache\" />\n<meta http-equiv=\"expires\" content=\"0\" />\n<meta http-equiv=\"Expires\" content=\"Tue, 01 Jan 1980 1:00:00 GMT\" />\n<meta http-equiv=\"Pragma\" content=\"no-cache\" />\n</head>\n\n<body>\n\n<div id=\"Header\">\n\n<div id=\"Logo\">\n<div id=\"LogoContent\"><a href=\"/jpetstore/actions/Catalog.action;jsessionid=3C08748DF337C58A4A2AB680458C240F\"><img src=\"../images/logo-topbar.gif\" /></a></div>\n</div>\n\n<div id=\"Menu\">\n<div id=\"MenuContent\"><a href=\"/jpetstore/actions/Cart.action;jsessionid=3C08748DF337C58A4A2AB680458C240F?viewCart=\"><img align=\"middle\" name=\"img_cart\" src=\"../images/cart.gif\" /></a> <img align=\"middle\" src=\"../images/separator.gif\" /> \n\t<a href=\"/jpetstore/actions/Account.action;jsessionid=3C08748DF337C58A4A2AB680458C240F?signonForm=\">Sign In</a>\n   <img align=\"middle\" src=\"../images/separator.gif\" /> <a\n\thref=\"../help.html\">?</a></div>\n</div>\n\n<div id=\"Search\">\n<div id=\"SearchContent\"><form method=\"post\" action=\"/jpetstore/actions/Catalog.action;jsessionid=3C08748DF337C58A4A2AB680458C240F\">\n\t<input size=\"14\" name=\"keyword\" type=\"text\" />\n\t<input name=\"searchProducts\" type=\"submit\" value=\"Search\" />\n<div style=\"display: none;\"><input type=\"hidden\" name=\"_sourcePage\" value=\"qV1rSHJHD3aavVsiMSExwem5SitWDrcSVUKXJmRV-sMTOs7a94hmbseDWGLt0slTJcvZ6-7abEhF7m2j6D80wlTfOnNLjD1r\" /><input type=\"hidden\" name=\"__fp\" value=\"9h2GmL2qaw2EvUSuARbQm4vUuQ8FCNIcLAS3EIGZd1b8-tRCs2bvFTMLCawqMutq\" /></div></form></div>\n</div>\n\n<div id=\"QuickLinks\"><a href=\"/jpetstore/actions/Catalog.action;jsessionid=3C08748DF337C58A4A2AB680458C240F?viewCategory=&amp;categoryId=FISH\"><img src=\"../images/sm_fish.gif\" /></a> <img src=\"../images/separator.gif\" /> <a href=\"/jpetstore/actions/Catalog.action;jsessionid=3C08748DF337C58A4A2AB680458C240F?viewCategory=&amp;categoryId=DOGS\"><img src=\"../images/sm_dogs.gif\" /></a> <img src=\"../images/separator.gif\" /> <a href=\"/jpetstore/actions/Catalog.action;jsessionid=3C08748DF337C58A4A2AB680458C240F?viewCategory=&amp;categoryId=REPTILES\"><img src=\"../images/sm_reptiles.gif\" /></a> <img src=\"../images/separator.gif\" /> <a href=\"/jpetstore/actions/Catalog.action;jsessionid=3C08748DF337C58A4A2AB680458C240F?viewCategory=&amp;categoryId=CATS\"><img src=\"../images/sm_cats.gif\" /></a> <img src=\"../images/separator.gif\" /> <a href=\"/jpetstore/actions/Catalog.action;jsessionid=3C08748DF337C58A4A2AB680458C240F?viewCategory=&amp;categoryId=BIRDS\"><img src=\"../images/sm_birds.gif\" /></a></div>\n\n</div>\n\n<div id=\"Content\">\n\n<div id=\"BackLink\"><a href=\"/jpetstore/actions/Catalog.action;jsessionid=3C08748DF337C58A4A2AB680458C240F\">Return to Main Menu</a></div>\n\n<div id=\"Catalog\">\n\n<div id=\"Cart\">\n\n<h2>Shopping Cart</h2>\n<form method=\"post\" action=\"/jpetstore/actions/Cart.action;jsessionid=3C08748DF337C58A4A2AB680458C240F\">\n\t<table>\n\t\t<tr>\n\t\t\t<th><b>Item ID</b></th>\n\t\t\t<th><b>Product ID</b></th>\n\t\t\t<th><b>Description</b></th>\n\t\t\t<th><b>In Stock?</b></th>\n\t\t\t<th><b>Quantity</b></th>\n\t\t\t<th><b>List Price</b></th>\n\t\t\t<th><b>Total Cost</b></th>\n\t\t\t<th>&nbsp;</th>\n\t\t</tr>\n\n\t\t\n\t\t\t<tr>\n\t\t\t\t<td colspan=\"8\"><b>Your cart is empty.</b></td>\n\t\t\t</tr>\n\t\t\n\n\t\t\n\t\t<tr>\n\t\t\t<td colspan=\"7\">Sub Total: $0.00 <input name=\"updateCartQuantities\" type=\"submit\" value=\"Update Cart\" /></td>\n\t\t\t<td>&nbsp;</td>\n\t\t</tr>\n\t</table>\n\n<div style=\"display: none;\"><input type=\"hidden\" name=\"_sourcePage\" value=\"YlaECgsjDtGlw5MJwasBXdU-UxHe0HoC55GjWKicGpPSFwL_dxeZsQxpIF2fIEAl3Bbt5iVMB85Nue6Bk-qXOVnQJIDYC_Zj\" /><input type=\"hidden\" name=\"__fp\" value=\"xVdCoQQMnZKQvjMz-MmC4dsJgTnCaZoY9Oz4kAJzZVoohkngnClySP69Kw5NcHwC\" /></div></form> </div>\n\n<div id=\"MyList\">\n  \n</div>\n\n<div id=\"Separator\">&nbsp;</div>\n</div>\n\n\n</div>\n\n<div id=\"Footer\">\n\n<div id=\"PoweredBy\">&nbsp;<a href=\"http://www.mybatis.org\">www.mybatis.org</a>\n</div>\n\n<div id=\"Banner\"></div>\n\n</div>\n\n</body>\n</html>",
+      "status" : 200,
+      "headers" : { }
+    }
+  }

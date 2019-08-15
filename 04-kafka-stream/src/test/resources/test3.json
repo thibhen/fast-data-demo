@@ -1,0 +1,31 @@
+{
+    "request" : {
+      "headers" : {
+        "host" : "localhost:8083",
+        "connection" : "keep-alive",
+        "upgrade-insecure-requests" : "1",
+        "user-agent" : "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/63.0.3239.108 Safari/537.36",
+        "accept" : "text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8",
+        "referer" : "http://localhost:8083/jpetstore/actions/Catalog.action;jsessionid=C697F7DEF19A21CDFECD53E84D358157?viewCategory=&categoryId=DOGS",
+        "accept-encoding" : "gzip, deflate, br",
+        "accept-language" : "fr-FR,fr;q=0.9,en-US;q=0.8,en;q=0.7",
+        "cookie" : "_ga=GA1.1.371390149.1561733370"
+      },
+      "parameters" : {
+        "productId" : "K9-PO-02",
+        "viewProduct" : ""
+      },
+      "body" : "",
+      "method" : "GET",
+      "contentType" : null,
+      "remoteAddr" : "172.17.0.1",
+      "servletPath" : "/jpetstore/actions/Catalog.action",
+      "sessionId" : "09536D858382360B5600231A2BE02B68"
+    },
+    "response" : {
+      "body" : "\n\n\n\n\n\n\n<!DOCTYPE html PUBLIC \"-//W3C//DTD XHTML 1.0 Transitional//EN\"\n\"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd\">\n\n<html xmlns=\"http://www.w3.org/1999/xhtml\">\n\n<head>\n<link rel=\"StyleSheet\" href=\"../css/jpetstore.css\" type=\"text/css\"\n\tmedia=\"screen\" />\n\n<meta name=\"generator\"\n\tcontent=\"HTML Tidy for Linux/x86 (vers 1st November 2002), see www.w3.org\" />\n<title>JPetStore Demo</title>\n<meta content=\"text/html; charset=windows-1252\"\n\thttp-equiv=\"Content-Type\" />\n<meta http-equiv=\"Cache-Control\" content=\"max-age=0\" />\n<meta http-equiv=\"Cache-Control\" content=\"no-cache\" />\n<meta http-equiv=\"expires\" content=\"0\" />\n<meta http-equiv=\"Expires\" content=\"Tue, 01 Jan 1980 1:00:00 GMT\" />\n<meta http-equiv=\"Pragma\" content=\"no-cache\" />\n</head>\n\n<body>\n\n<div id=\"Header\">\n\n<div id=\"Logo\">\n<div id=\"LogoContent\"><a href=\"/jpetstore/actions/Catalog.action;jsessionid=2266366B9DE055107FF8D2D30ABDE1CE\"><img src=\"../images/logo-topbar.gif\" /></a></div>\n</div>\n\n<div id=\"Menu\">\n<div id=\"MenuContent\"><a href=\"/jpetstore/actions/Cart.action;jsessionid=2266366B9DE055107FF8D2D30ABDE1CE?viewCart=\"><img align=\"middle\" name=\"img_cart\" src=\"../images/cart.gif\" /></a> <img align=\"middle\" src=\"../images/separator.gif\" /> \n\t<a href=\"/jpetstore/actions/Account.action;jsessionid=2266366B9DE055107FF8D2D30ABDE1CE?signonForm=\">Sign In</a>\n   <img align=\"middle\" src=\"../images/separator.gif\" /> <a\n\thref=\"../help.html\">?</a></div>\n</div>\n\n<div id=\"Search\">\n<div id=\"SearchContent\"><form method=\"post\" action=\"/jpetstore/actions/Catalog.action;jsessionid=2266366B9DE055107FF8D2D30ABDE1CE\">\n\t<input size=\"14\" name=\"keyword\" type=\"text\" />\n\t<input name=\"searchProducts\" type=\"submit\" value=\"Search\" />\n<div style=\"display: none;\"><input type=\"hidden\" name=\"_sourcePage\" value=\"EfOPkht2nQMTc_0Dw4amMHZio3SZ9rSzo65Y-xrCWmlvrC0WszipTuAfzdp7NEPmiDpQGMSro1keNk4D0yUuOwjNxCLarbZkXr2jF0pEpOg=\" /><input type=\"hidden\" name=\"__fp\" value=\"_eWegCp1IJjR_sbSDr0A1Kt15qg2I0hfRdF6pzs154ee3Y56Ey_si09j2isiBm0n\" /></div></form></div>\n</div>\n\n<div id=\"QuickLinks\"><a href=\"/jpetstore/actions/Catalog.action;jsessionid=2266366B9DE055107FF8D2D30ABDE1CE?viewCategory=&amp;categoryId=FISH\"><img src=\"../images/sm_fish.gif\" /></a> <img src=\"../images/separator.gif\" /> <a href=\"/jpetstore/actions/Catalog.action;jsessionid=2266366B9DE055107FF8D2D30ABDE1CE?viewCategory=&amp;categoryId=DOGS\"><img src=\"../images/sm_dogs.gif\" /></a> <img src=\"../images/separator.gif\" /> <a href=\"/jpetstore/actions/Catalog.action;jsessionid=2266366B9DE055107FF8D2D30ABDE1CE?viewCategory=&amp;categoryId=REPTILES\"><img src=\"../images/sm_reptiles.gif\" /></a> <img src=\"../images/separator.gif\" /> <a href=\"/jpetstore/actions/Catalog.action;jsessionid=2266366B9DE055107FF8D2D30ABDE1CE?viewCategory=&amp;categoryId=CATS\"><img src=\"../images/sm_cats.gif\" /></a> <img src=\"../images/separator.gif\" /> <a href=\"/jpetstore/actions/Catalog.action;jsessionid=2266366B9DE055107FF8D2D30ABDE1CE?viewCategory=&amp;categoryId=BIRDS\"><img src=\"../images/sm_birds.gif\" /></a></div>\n\n</div>\n\n<div id=\"Content\">\n\n\n\n<div id=\"BackLink\"><a href=\"/jpetstore/actions/Catalog.action;jsessionid=2266366B9DE055107FF8D2D30ABDE1CE?viewCategory=&amp;categoryId=DOGS\">Return to DOGS</a></div>\n\n<div id=\"Catalog\">\n\n<h2>Poodle</h2>\n\n<table>\n\t<tr>\n\t\t<th>Item ID</th>\n\t\t<th>Product ID</th>\n\t\t<th>Description</th>\n\t\t<th>List Price</th>\n\t\t<th>&nbsp;</th>\n\t</tr>\n\t\n\t\t<tr>\n\t\t\t<td><a href=\"/jpetstore/actions/Catalog.action;jsessionid=2266366B9DE055107FF8D2D30ABDE1CE?viewItem=&amp;itemId=EST-8\">EST-8</a></td>\n\t\t\t<td>K9-PO-02</td>\n\t\t\t<td>Male Puppy  \n\t\t\t  Poodle</td>\n\t\t\t<td>$18.50</td>\n\t\t\t<td><a href=\"/jpetstore/actions/Cart.action;jsessionid=2266366B9DE055107FF8D2D30ABDE1CE?addItemToCart=&amp;workingItemId=EST-8\" class=\"Button\">Add to Cart</a></td>\n\t\t</tr>\n\t\n\t<tr>\n\t\t<td>\n\t\t</td>\n\t</tr>\n</table>\n\n</div>\n\n\n</div>\n\n<div id=\"Footer\">\n\n<div id=\"PoweredBy\">&nbsp;<a href=\"http://www.mybatis.org\">www.mybatis.org</a>\n</div>\n\n<div id=\"Banner\"></div>\n\n</div>\n\n</body>\n</html>\n\n\n\n\n\n",
+      "status" : 200,
+      "headers" : { }
+    }
+  }
+  

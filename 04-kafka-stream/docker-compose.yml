@@ -1,0 +1,7 @@
+the-stream:
+  image: the-stream
+  container_name: the-stream
+  ports:
+    - "8084:8084"
+  external_links:
+    - kafka:kafka

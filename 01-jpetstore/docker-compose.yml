@@ -1,0 +1,6 @@
+jpetstore:
+  image: jpetstore
+  container_name: jpetstore
+  ports:
+    - "8080:8080"
+

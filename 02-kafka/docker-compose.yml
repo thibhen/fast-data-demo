@@ -1,0 +1,15 @@
+zookeeper:
+  image: confluent/zookeeper
+  container_name: zookeeper
+  ports:
+    - "2181:2181"
+kafka:
+  image: confluent/kafka
+  container_name: kafka
+  ports:
+    - "9092:9092"
+  links:
+    - zookeeper:zookeeper
+#  environment:
+#    KAFKA_ADVERTISED_HOST_NAME: "localhost"
+
