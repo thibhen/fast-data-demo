@@ -4,6 +4,7 @@ import com.fasterxml.jackson.databind.JsonNode;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import com.fasterxml.jackson.databind.node.ObjectNode;
 import com.google.common.io.CharStreams;
+import com.netflix.util.Pair;
 import com.netflix.zuul.ZuulFilter;
 import com.netflix.zuul.context.RequestContext;
 
@@ -53,7 +54,18 @@ public class Filter extends ZuulFilter {
 
     @Override
     public boolean shouldFilter() {
-        return true;
+         boolean shouldFilter = true;
+
+        if( getCurrentContext() != null && 
+            getCurrentContext().getOriginResponseHeaders() != null ){
+            // Skip images from the filter
+            for(Pair<String,String> pair : getCurrentContext().getOriginResponseHeaders()){
+                if( "Content-Type".equals(pair.first()) && pair.second().contains("image") ){
+                        shouldFilter = false;
+                }
+            }
+        }
+        return shouldFilter;
     }
 
     private String extractJsonFromHttp() throws IOException {
@@ -87,12 +99,11 @@ public class Filter extends ZuulFilter {
         InputStream responseStream = context.getResponseDataStream();
         String responseBody = StreamUtils.copyToString(responseStream, Charset.forName("UTF-8"));
         responseNode.put("body",responseBody);
-        context.setResponseBody(responseBody);
-
+        
         // Processing Request Body
         BufferedReader requestReader = context.getRequest().getReader();
         String requestBody = CharStreams.toString(requestReader);
-        requestNode.put("body",requestBody);
+        responseNode.put("body",requestBody);
         
         // Processing other stuff
         requestNode.put("method",context.getRequest().getMethod());
@@ -104,14 +115,19 @@ public class Filter extends ZuulFilter {
 
         // Processing Response Headers
         ObjectNode respHeaderNode = mapper.createObjectNode();
-        context.getResponse().getHeaderNames()
+        //context.getResponse().getHeaderNames()
+
+        context.getOriginResponseHeaders()
             .stream()
-            .forEach( x -> { respHeaderNode.put(x,context.getResponse().getHeader(x));} );
+            .forEach( x -> { respHeaderNode.put(x.first(),x.second());} );
         responseNode.set("headers",respHeaderNode);
         
         // Create Output
         String jsonString = mapper.writerWithDefaultPrettyPrinter().writeValueAsString(rootNode);
         
+
+        context.setResponseBody(responseBody);
+
         return jsonString;
     }
 
@@ -119,7 +135,6 @@ public class Filter extends ZuulFilter {
     public Object run() {
 		
 		try {
-
             String jsonStuff = extractJsonFromHttp();
             
             LOGGER.info(String.format("%-100s",jsonStuff));

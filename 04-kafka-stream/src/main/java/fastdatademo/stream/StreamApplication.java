@@ -33,35 +33,6 @@ public class StreamApplication {
     String kafka_input_topic = "input";
 
 	@Bean
-    public Topology kafkaStreamTopologyOLDString() throws IOException{
-		
-		final StreamsBuilder builder = new StreamsBuilder();
-        //builder.stream(kafka_input_topic).mapValues(v -> v.toString().toUpperCase()).to(kafka_output_topic);
-		
-		builder
-			.stream(kafka_input_topic)
-			.mapValues(v -> 
-				{ 
-					try {
-						ObjectMapper mapper = new ObjectMapper();
-						JsonNode node = mapper.readTree(v.toString());
-						
-						ObjectNode response = mapper.createObjectNode();
-						response.put("action", node.get("request").get("servletPath").toString());
-
-						return response.toString();
-					} catch (IOException e) {
-						e.printStackTrace();
-						return null;
-					}
-				}
-			)
-			.to(kafka_output_topic);
-			
-        return builder.build();
-	}
-	
-	@Bean
     public Topology kafkaStreamTopology() throws IOException{
 		
 		final StreamsBuilder builder = new StreamsBuilder();
@@ -69,12 +40,16 @@ public class StreamApplication {
 		
 		builder
 			.stream(kafka_input_topic)
+			.filter((k,v) ->  ((JsonNode)v).has("request") )
+			.filter((k,v) ->  ((JsonNode)v).get("request").has("servletPath"))
+			.filter((k,v) ->  ((JsonNode)v).get("request").has("parameters"))
 			.mapValues(v -> 
 				{ 
 					ObjectMapper mapper = new ObjectMapper();					
 					ObjectNode response = mapper.createObjectNode();
-					response.put("action", ((JsonNode)v).get("request").get("servletPath").toString());
-					return response.toString();
+					response.put("action", ((JsonNode)v).get("request").get("servletPath"));
+					response.put("parameters", ((JsonNode)v).get("request").get("parameters"));
+					return response;
 				}
 			)
 			.to(kafka_output_topic);

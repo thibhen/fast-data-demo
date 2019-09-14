@@ -2,8 +2,6 @@ package fastdatademo.stream;
 
 import org.springframework.core.env.Environment;
 import org.springframework.core.io.Resource;
-import org.springframework.kafka.support.serializer.JsonDeserializer;
-import org.springframework.kafka.support.serializer.JsonSerializer;
 
 import static org.junit.Assert.assertTrue;
 
@@ -59,6 +57,7 @@ public class StreamApplicationTests {
         StreamsConfig.APPLICATION_ID_CONFIG, 
             StreamsConfig.BOOTSTRAP_SERVERS_CONFIG, 
             StreamsConfig.DEFAULT_KEY_SERDE_CLASS_CONFIG, 
+            //"spring.json.use.type.headers",
             StreamsConfig.DEFAULT_VALUE_SERDE_CLASS_CONFIG)
             .stream()
             .forEach(key -> {
@@ -79,7 +78,6 @@ public class StreamApplicationTests {
     @Test
     public void testKafkaStreamTopology() throws IOException {
         
-        
         // https://www.programcreek.com/java-api-examples/index.php?api=org.apache.kafka.connect.json.JsonSerializer
 
         
@@ -89,11 +87,14 @@ public class StreamApplicationTests {
         // setup test driver
         TopologyTestDriver testDriver = new TopologyTestDriver(topology, properties());
 
+        MySerde serde = new MySerde();
+
         // Setup the message sender
         ConsumerRecordFactory<String, JsonNode> factory = new ConsumerRecordFactory<>(kafka_input_topic, 
                 new StringSerializer(),
-                new MySerializer());
+                serde.serializer());
         JsonNode node = new ObjectMapper().readTree(message());
+
         ConsumerRecord<byte[], byte[]> message = factory.create(node);
         // Send the message
         testDriver.pipeInput(message);
@@ -101,7 +102,7 @@ public class StreamApplicationTests {
         // Setup the message consumer
         ProducerRecord<String, JsonNode> outputRecord = testDriver.readOutput(kafka_output_topic, 
                 new StringDeserializer(),
-                new MyDeserializer());
+                serde.deserializer());
         
         String output = outputRecord.value().toString();
         
@@ -111,16 +112,21 @@ public class StreamApplicationTests {
             LINE,
             message(),
             LINE, 
-            output.toString(), 
+            output, 
             LINE)
             .forEach(System.out::println);
 
-        testDriver.close();
-
+        try{
+            testDriver.close();
+        }catch(Throwable t){
+        }
+             
         assertTrue("Message processed successfully !", 
-            output != null && output.toString().length() >0);
+            output != null && output.length() >0);
         
     }
 
     private final static String LINE = "=".repeat(80);
+
+
 }

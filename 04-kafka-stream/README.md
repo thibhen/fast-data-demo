@@ -7,6 +7,5 @@ mvn install -DskipTests && docker build -t the-stream:latest .
 
 
 
-
 docker exec kafka kafka-console-consumer --topic kafka-stream1 --from-beginning --zookeeper zookeeper:2181
 

@@ -7,6 +7,7 @@ zuul:
     default:
       path: /**
       url: http://jpetstore:8080/
+ #     url: http://localhost:8080/
 
 spring:
   devtools:
